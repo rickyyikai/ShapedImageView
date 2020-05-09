@@ -119,7 +119,7 @@ public class ShapedImageView extends ImageView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        int saveLayers = canvas.saveLayer(0, 0, getMeasuredWidth(), getMeasuredHeight(), null, Canvas.ALL_SAVE_FLAG);
+//        int saveLayers = canvas.saveLayer(0, 0, getMeasuredWidth(), getMeasuredHeight(), null, Canvas.ALL_SAVE_FLAG); 0.8.7版造成下緣沒有圓角，暫時刪掉
         super.onDraw(canvas);
 
         if (mStrokeWidth > 0 && mStrokeShape != null) {
@@ -153,7 +153,7 @@ public class ShapedImageView extends ImageView {
                 }
                 break;
         }
-        canvas.restoreToCount(saveLayers);
+//        canvas.restoreToCount(saveLayers); 0.8.7版造成下緣沒有圓角，暫時刪掉
     }
 
     @Override
